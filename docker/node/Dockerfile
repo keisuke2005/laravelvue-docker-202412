@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y \
 
 # コンテナが起動したらプロジェクトの依存関係をインストールする
 CMD ["sh", "-c", "npm install && npm run dev"]
+#CMD ["sh"]
+#CMD ["tail", "-f", "/dev/null"]
 
 
 
