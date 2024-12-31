@@ -3,6 +3,7 @@ import './bootstrap';
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { DefineComponent } from 'vue';
+import 'bootstrap';
 
 createInertiaApp({
   resolve: (name: string): DefineComponent => {

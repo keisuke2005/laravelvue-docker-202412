@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <h1>Welcome to the Sample Page</h1>
-        <p>{{ message }}</p>
-        <button @click="checkType">Check Type</button>
+    <div class="container mt-5">
+        <h1 class="text-primary">コンテナ php8.4+nginx/node(vite)/mysql</h1>
+        <h1 class="text-primary">アプリケーション Laravel11/Inertia/Vue3/TypeScript/Bootstrap5</h1>
+        <button class="btn btn-success" @click="checkType">Click Me</button>
     </div>
 </template>
 <script lang="ts">
@@ -18,8 +18,8 @@ export default defineComponent({
     },
     methods: {
         checkType() {
-            const value: number = 123; // 型アサーション
-            console.log(value); // 正常にログが表示されればTSが動作している
+            const value: number = 1;
+            console.log(value);
         },
     },
 });
@@ -28,11 +28,5 @@ export default defineComponent({
 
 
 <style scoped>
-h1 {
-    color: #4CAF50;
-    font-size: 24px;
-}
-p {
-    color: #555;
-}
+
 </style>
