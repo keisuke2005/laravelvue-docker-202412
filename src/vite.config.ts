@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import checker from 'vite-plugin-checker';
 import laravel from 'laravel-vite-plugin';
+import eslint from 'vite-plugin-eslint'; 
 
 export default defineConfig({
     logLevel: 'error',
@@ -11,10 +12,20 @@ export default defineConfig({
         checker({
             vueTsc: true,
             overlay: true,
-            // esLintのチェックをしない場合は以下は消しても構いません
             // eslint: {
-            //     lintCommand: 'eslint "./src/**/*.{ts,vue}"', // lint コマンドを直接指定
+            //     files: ['./resources/**/*.{js,ts,vue}'],
+            //     eslintOptions: {
+            //         overrideConfigFile: './eslint.config.js', // ESLint設定ファイルを指定
+            //     },
             // },
+            
+        }),
+        eslint({
+            emitWarning: true,
+            emitError: true,
+            failOnError: false,
+            failOnWarning: false,
+            fix: false,
         }),
         laravel({
             input: [
